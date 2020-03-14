@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Particles Effects</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="leaderboard" class="main"></div>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io('https://eclary.glitch.me');
+  var finish = false;
+  socket.on('leaderboard', function (money) {
+    let lb = document.getElementById('leaderboard');
+    if (finish == true) return console.log(finish);
+    for (let i = 0; i < money.data.length; i++){
+      
+      // main div
+      let div = document.createElement('div')
+      lb.appendChild(div)
+      
+      // card
+      let card = document.createElement('div')
+      card.classList = 'leaderboardPlayer'
+      div.appendChild(card)
+      
+      // sep
+      let sep = document.createElement('div')
+      sep.classList = 'leaderboardPlayerSep'
+      div.appendChild(sep)
+      
+      //left leaderboardPlayerLeft
+      let left = document.createElement('div')
+      left.classList = 'leaderboardPlayerLeft'
+      card.appendChild(left)
+      
+      //stat leaderboardPlayerStats
+      let stats = document.createElement('div')
+      stats.classList = 'leaderboardPlayerStats'
+      card.appendChild(stats)
+      
+      // number ball
+      let number = document.createElement('div')
+      number.classList = 'leaderboardRank';
+      number.innerHTML = money.data.length//i+1
+      left.appendChild(number)
+      
+      // icon leaderboardPlayerIcon
+      let icon = document.createElement('div')
+      icon.classList = 'leaderboardPlayerIcon'
+      left.appendChild(icon)
+      
+      // img .src
+      let avatar = document.createElement('img')
+      let url = money.data[i][2]
+      if(url.includes('size')){
+        console.log('slice' + i)
+        url = url.slice(0, -10)
+        avatar.src = url
+        icon.appendChild(avatar)
+      }
+      avatar.src = url
+      icon.appendChild(avatar)
+      
+      // name leaderboardPlayerUsername
+      let name = document.createElement('div')
+      name.classList = 'leaderboardPlayerUsername'
+      name.innerHTML = money.data[i][0]
+      left.appendChild(name)
+      
+      // stat block leaderboardPlayerStatBlock
+      let block = document.createElement('div')
+      block.classList = 'leaderboardPlayerStatBlock'
+      stats.appendChild(block)
+      
+      //sname leaderboardPlayerStatName
+      let sname = document.createElement('div')
+      sname.classList = 'leaderboardPlayerStatName'
+      sname.innerHTML = 'MONEY'
+      block.appendChild(sname)
+      
+      //svalue leaderboardPlayerStatValue
+      let svalue = document.createElement('div')
+      svalue.classList = 'leaderboardPlayerStatValue'
+      svalue.innerHTML = money.data[i][1]
+      block.appendChild(svalue)
+      
+				
+      console.log(money.data.length)
+      console.log('t')
+      console.log(money.data)
+      console.log(money.data[0])
+      console.log(money.data[0][0])
+      
+    }
+    finish = true
+  });
+</script>
+</html>

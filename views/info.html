@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Particles Effects</title>
+    <link rel="stylesheet/less" type="text/css" href="/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+  </head>
+  <body>
+    <div id="preloader" class="loader">
+      <div id="loader"></div>
+    </div>
+    <page>
+    <header>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg sticky">
+                <a class="navbar-brand" href="/">
+                    <i class="fas fa-bolt fa-2x mx-2"></i>Éclary V4</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-right text-light"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/home">
+                                <i class="fas fa-home mx-1"></i>HOME
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/news">
+                                <i class="fas fa-clipboard-list mx-1"></i>NEWS</a>
+                      </li>
+                      <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="far fa-chart-bar mx-1"></i>STATS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-gamepad mx-1"></i>GAME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/api/discord/login" id="text">
+                                <i class="fas fa-user-circle mx-1"></i>LOG IN</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+  <div class="container">
+  <div class="cards">
+    <div class="card-item">
+      <div class="card-image">
+      </div>
+      <div class="card-info">
+        <h2 class="card-title">Exploring around</h2>
+        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-item">
+      <div class="card-image">
+      </div>
+      <div class="card-info">
+        <h2 class="card-title">A new trail you can't miss</h2>
+        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-item">
+      <div class="card-image">
+      </div>
+      <div class="card-info">
+        <h2 class="card-title">Inside the Outdoors</h2>
+        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-item">
+      <div class="card-image">
+      </div>
+      <div class="card-info">
+        <h2 class="card-title">Essential hiking hacks</h2>
+        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-item">
+      <div class="card-image">
+      </div>
+      <div class="card-info">
+        <h2 class="card-title">Discovering this hidden gem</h2>
+        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card-item">
+      <div class="card-image">
+        <img src="https://source.unsplash.com/featured/?mounains">
+      </div>
+      <div class="card-info">
+        <h2 class="card-title">1 Day routes for this weekend</h2>
+        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </page>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.12.8/coffee-script.js"></script>
+  <script src="./main.js"></script>
+  <script src="./client.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.12.8/coffee-script.js">
+    images = [
+  "https://source.unsplash.com/featured/?mountains",
+  "https://source.unsplash.com/featured/?hiking",
+  "https://source.unsplash.com/featured/?kayak",
+  "https://source.unsplash.com/featured/?forest",
+  "https://source.unsplash.com/featured/?mountain"
+  "https://source.unsplash.com/featured/?trail"
+  "https://source.unsplash.com/featured/?outdoors"
+"https://source.unsplash.com/featured/?norway"
+]
+
+$('div.card-image').each ->
+  random_image_index = Math.floor(images.length * Math.random())
+  $(this).css('background-image', 'url(' + images[random_image_index] + ')')
+  </script>
+  </body>
+</html>

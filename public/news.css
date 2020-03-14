@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet|Poppins");
+* {
+  box-sizing: border-box;
+}
+
+.section-1 {
+  padding: 20vmin 0vmin 70vmin 0;
+}
+
+.panel img {
+  width: 20px;
+  height: 20px;
+}
+
+.panel .emoji {
+  width: 25.6px;
+  height: 20px;
+}
+.section-1 .pray a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    top:.5rem;
+    left:5rem;
+    width:32px;
+    height:32px;
+    background:#f7f7f7;
+    box-shadow:0 0 2px rgba(0,0,0,.3);
+    z-index: 5;
+}
+
+.section-1 .row .col-md-6 .pray img {
+  opacity: 0.8;
+  width: 80%;
+  border-radius: 0.2em;
+}
+
+.section-1 .row .col-md-6:last-child {
+  position: relative;
+}
+
+.section-1 .row .col-md-6 .panel {
+  position: absolute;
+  top: 7vmin;
+  left: -18vmin;
+  background: white;
+  border-radius: 0px;
+  text-align: left;
+  padding: 3vmin 3vmin 0vmin 3vmin;
+  box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+  font-family: var(--Rubik);
+  z-index: 1;
+}
+
+.section-1 .row .col-md-6 .panel h1 {
+  font-weight: bold;
+  padding: 0.4em 0;
+  font-size: 3em;
+}
+
+.section-1 .row .col-md-6 .panel h6 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.section-1 .row .col-md-6 .panel p {
+  font-size: 0.9em;
+  color: black;
+}
+
+.section-1 .row .col-md-6 .panel b {
+  font-weight: bold;
+}
